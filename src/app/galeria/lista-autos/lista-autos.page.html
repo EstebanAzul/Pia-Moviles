@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="dark" >
+    <ion-buttons slot="start">
+      <ion-back-button defaulHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Autos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-item *ngFor = "let i of autos" [routerLink] = "i.redirectToo" detail>
+      <ion-avatar slot="start">
+        <img [src]="i.img" alt="">
+      </ion-avatar>
+      <p>{{i.nom_auto}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

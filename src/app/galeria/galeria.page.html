@@ -1,9 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>galeria</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <ion-row class="cards-st">
+    <ion-col size="6" *ngFor="let m of marca">
+      <ion-card id="card-estilos"  [routerLink]="m.redirectTo">
+        <img [src]="m.img" alt="">
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>

@@ -1,7 +1,8 @@
 {
   "name": "PIA AppMov",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
