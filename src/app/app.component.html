@@ -1,0 +1,53 @@
+<ion-app>
+  
+  <ion-header>
+  <ion-toolbar class="barra_top">
+      <ion-title>BAT GARAGE</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-tabs>
+     <ion-tab-bar slot="bottom" class="tabBar">
+      <ion-tab-button  *ngFor="let m of appPages" routerLink= "{{ m.url }}" class="barrNav">
+        <ion-icon [md]="m.icon"></ion-icon>
+        <ion-label>{{ m.title }}</ion-label> 
+      </ion-tab-button>
+    </ion-tab-bar>
+ 
+  </ion-tabs>
+</ion-content>
+</ion-app>
+
+<!--
+<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+  <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+    <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"></ion-icon>
+    <ion-label>{{ p.title }}</ion-label>
+  </ion-item>
+</ion-menu-toggle>
+</ion-list> -->
+
+     <!--<ion-badge color="primary"></ion-badge> -->  
+
+ <!--
+
+
+tab={{m.tab}}
+
+
+      
+<ion-tab-bar slot="top">
+      <ion-tab-button tab="nose" routerLink="/inicio">
+            <ion-icon color="primary" icon="happy"></ion-icon>
+            <ion-label>Primer</ion-label>
+            <ion-badge color="primary"></ion-badge> 
+          </ion-tab-button>
+    
+          <ion-tab-button tab="nose2">
+            <ion-icon color="primary" icon="logo-angular"></ion-icon>
+            <ion-label>Primer</ion-label>
+            <ion-badge color="primary"></ion-badge> 
+          </ion-tab-button>
+        </ion-tab-bar>
+
+  -->
