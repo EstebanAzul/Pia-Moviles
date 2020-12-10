@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ControlInfoService } from './galeria/control/control-info.service';
+import { GoogleMaps } from '@ionic-native/Google-maps';
 
 
 @NgModule({

@@ -13,8 +13,9 @@ import { MapaPage } from './mapa.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    MapaPageRoutingModule
-  ],
+    MapaPageRoutingModule,
+
+    ],
   declarations: [MapaPage]
 })
 export class MapaPageModule {}
