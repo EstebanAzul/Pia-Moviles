@@ -9,7 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ControlInfoService } from './galeria/control/control-info.service';
-import { GoogleMaps } from '@ionic-native/Google-maps';
+
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx'
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { GoogleMaps } from '@ionic-native/Google-maps';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ControlInfoService
+    ControlInfoService,
+    Geolocation,
+    NativeGeocoder
   ],
   bootstrap: [AppComponent]
 })

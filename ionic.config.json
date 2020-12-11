@@ -1,7 +1,6 @@
 {
-  "name": "PIA AppMov",
+  "name": "Pia-aMoviles",
   "integrations": {
-    "capacitor": {},
     "cordova": {}
   },
   "type": "angular"
