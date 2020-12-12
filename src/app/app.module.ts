@@ -13,6 +13,7 @@ import { ControlInfoService } from './galeria/control/control-info.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx'
 
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +29,8 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx'
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ControlInfoService,
     Geolocation,
-    NativeGeocoder
+    NativeGeocoder,
+    Camera
   ],
   bootstrap: [AppComponent]
 })

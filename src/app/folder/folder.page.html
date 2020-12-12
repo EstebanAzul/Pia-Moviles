@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
-  
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">PIA</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">INICIO</strong>
-    <p>Imagenes</p>
+<ion-content>
+  <div class="ion-padding">
+      <ion-button expand="full" (click)="camara()">
+        Take Snap
+      </ion-button>
+     
+      <img [src]="tempImg" />
   </div>
 </ion-content>
 

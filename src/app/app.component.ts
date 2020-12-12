@@ -36,6 +36,12 @@ export class AppComponent implements OnInit {
       url: '/mapa',
       icon: 'location',
       tab: 'b'
+    },
+    {
+      title: 'Camara',
+      url:'/folder',
+      icon: 'camera',
+      tap:'nose'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
