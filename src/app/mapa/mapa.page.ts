@@ -2,6 +2,7 @@ import { NativeGeocoder, NativeGeocoderOptions, NativeGeocoderResult } from '@io
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 
+
 declare var google;
 
 @Component({
@@ -16,20 +17,16 @@ export class MapaPage implements OnInit {
   address: string;
   lat: string;
   long: string;
-  autocomplete: { input: string};
-  autocompleteItems: any[];
   location: any;
   placeid: any;
-  GoogleAutocomplete: any;
+ 
 
   constructor(
     private geolocation: Geolocation,
     private nativeGeocoder: NativeGeocoder,
     public zone: NgZone,
   ) { 
-    this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
-    this.autocomplete = { input: ''};
-    this.autocompleteItems = [];
+ 
   }
 
   ngOnInit() {
@@ -55,6 +52,7 @@ export class MapaPage implements OnInit {
     }).catch((error) => {
       console.log('Error getting location', error);
     });
+    
   }
 
   getAdressFormCoords(lattitude, longitude) {
@@ -83,33 +81,7 @@ export class MapaPage implements OnInit {
   }
 
   ShowCords(){
-    alert('lat' +this.lat+', long '+this.long)
-  }
-
-  UpdateSearchResults() {
-    if(this.autocomplete.input == '') {
-      this.autocompleteItems = [];
-      return;
-    }
-    this.GoogleAutocomplete.getPlacePredictions({input: this.autocomplete.input},
-    (predictions, status) => {
-      this.autocompleteItems = [];
-      this.zone.run(() => {
-        predictions.forEach((prediction) => {
-          this.autocompleteItems.push(prediction);
-        });
-      });
-    });
-  }
-
-  SelectSearchResult(item) {
-    alert(JSON.stringify(item))
-    this.placeid = item.place_id
-  }
-
-  ClearAutocomplete() {
-    this.autocompleteItems = []
-    this.autocomplete.input = ''
+    alert('lat' +this.lat+', long '+this.long);
   }
 
   GoTo() {

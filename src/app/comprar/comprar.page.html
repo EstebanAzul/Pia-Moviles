@@ -1,11 +1,87 @@
-<ion-app class="comprar">
-<ion-header >
-  <ion-toolbar class="comprar">
-    <ion-title>comprar</ion-title>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/carros/catalogo" text="" icon="chevron-back" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>COMPRAR</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="comprar">
+<ion-content fullscreen>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label aling-self="center">
+        Déjanos tus datos.
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+    <ion-label position="floating">NOMBRE</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">APELLIDOS</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CORREO</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">DIRECCION</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CELULAR</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">NUEMERO DE TARJETA</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">YY/MM</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">CVV</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+     
+
+    </ion-grid>
+      
+    
+    <ion-item>
+      <ion-label>
+        <h2>Acepto terminos y condiciones establecidos</h2>
+        
+      </ion-label> 
+        <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+    </ion-item>
+ 
+    <div class="style">
+
+      <ion-button expand="full" size="default" color="medium" (click)="handleButtonClick()">
+        REALIZAR COMPRA
+      </ion-button>
+    </div>
+
+  </ion-list>
+
 
 </ion-content>
-</ion-app>
